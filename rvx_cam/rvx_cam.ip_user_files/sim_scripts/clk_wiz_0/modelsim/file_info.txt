@@ -1,0 +1,4 @@
+xpm_cdc.sv,systemverilog,xpm,../../../tools/Xilinx/2025.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef"incdir="../../../../ov2640_nexys.gen/sources_1/ip/clk_wiz_0"
+xpm_memory.sv,systemverilog,xpm,../../../tools/Xilinx/2025.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,incdir="../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef"incdir="../../../../ov2640_nexys.gen/sources_1/ip/clk_wiz_0"
+clk_wiz_0_sim_netlist.v,verilog,xil_defaultlib,../../../../ov2640_nexys.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v,incdir="../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef"incdir="../../../../ov2640_nexys.gen/sources_1/ip/clk_wiz_0"
+glbl.v,Verilog,xil_defaultlib,glbl.v

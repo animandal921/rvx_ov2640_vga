@@ -1,0 +1,164 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Wed Apr  1 21:49:25 2026
+| Host         : aniruddha-HP-Laptop running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_control_sets -verbose -file rvx_cam_nexys_control_sets_placed.rpt
+| Design       : rvx_cam_nexys
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    86 |
+|    Minimum number of control sets                        |    86 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   156 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    86 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     9 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    61 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             233 |          100 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             290 |           99 |
+| Yes          | No                    | No                     |             191 |           51 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1650 |          609 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
+|                Clock Signal                |                        Enable Signal                        |                        Set/Reset Signal                       | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
+|  clock_IBUF_BUFG                           |                                                             |                                                               |                1 |              1 |         1.00 |
+|  rvx_instance/accel_inst/div/inst/clk_out2 | rvx_instance/accel_inst/init/sender/p_0_in__1               | rvx_instance/accel_inst/init/sender/sio_c_i_1_n_0             |                1 |              1 |         1.00 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_spi_instance/bit_count[3]_i_2_n_0          | rvx_instance/rvx_spi_instance/cycle_counter1                  |                1 |              4 |         4.00 |
+|  clock_50mhz_BUFG                          |                                                             | rvx_instance/rvx_spi_instance/curr_state0                     |                3 |              4 |         1.33 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/current_state[3]_i_2_n_0     | rvx_instance/rvx_ram_instance/reset_internal                  |                1 |              4 |         4.00 |
+|  rvx_instance/accel_inst/div/inst/clk_out2 | rvx_instance/accel_inst/init/sender/data_temp[31]_i_1_n_0   |                                                               |                1 |              4 |         4.00 |
+|  clock_50mhz_BUFG                          |                                                             | rvx_instance/rvx_uart_instance/reset_internal                 |                5 |              5 |         1.00 |
+|  clock_50mhz_BUFG                          |                                                             | rvx_instance/rvx_core_instance/SR[0]                          |                6 |              6 |         1.00 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/csr_mcause[31]_i_1_n_0       | rvx_instance/rvx_ram_instance/reset_internal                  |                4 |              6 |         1.50 |
+|  clock_50mhz_BUFG                          |                                                             | rvx_instance/rvx_core_instance/prev_rw_address_reg[2]_1       |                3 |              7 |         2.33 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/prev_rw_address_reg[2]_3[0]  | reset_debounced                                               |                1 |              8 |         8.00 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/prev_rw_address_reg[4]_2[0]  | reset_debounced                                               |                1 |              8 |         8.00 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_uart_instance/p_0_in                       | rvx_instance/rvx_uart_instance/rx_register[7]_i_1_n_0         |                3 |              8 |         2.67 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_uart_instance/E[0]                         | rvx_instance/rvx_uart_instance/reset_internal                 |                2 |              8 |         4.00 |
+|  pclk_IBUF_BUFG                            |                                                             | rvx_instance/accel_inst/sobel_inst/pixel_data_out[11]_i_1_n_0 |                3 |              8 |         2.67 |
+|  rvx_instance/accel_inst/div/inst/clk_out2 | rvx_instance/accel_inst/init/init/count[7]_i_1_n_0          | reset_debounced                                               |                5 |              8 |         1.60 |
+|  clock_50mhz_BUFG                          |                                                             | rvx_instance/rvx_spi_instance/cycle_counter[7]_i_1_n_0        |                2 |              8 |         4.00 |
+|  clock_50mhz_BUFG                          |                                                             | rvx_instance/rvx_core_instance/SS[0]                          |                5 |              9 |         1.80 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_uart_instance/tx_register                  |                                                               |                3 |              9 |         3.00 |
+|  rvx_instance/accel_inst/div/inst/clk_out1 |                                                             | rvx_instance/accel_inst/vga/control/x_poi_reg[4]_0            |                3 |             10 |         3.33 |
+|  rvx_instance/accel_inst/div/inst/clk_out2 | rvx_instance/accel_inst/init/sender/data_temp[31]_i_1_n_0   | rvx_instance/accel_inst/init/sender/data_temp[30]_i_1_n_0     |                3 |             10 |         3.33 |
+|  pclk_IBUF_BUFG                            | rvx_instance/accel_inst/get_pic/raw_wr_en                   | rvx_instance/accel_inst/sobel_inst/wr_ptr_g[0]_i_1_n_0        |                2 |             10 |         5.00 |
+|  pclk_IBUF_BUFG                            | rvx_instance/accel_inst/sobel_inst/g_v_d4                   | rvx_instance/accel_inst/sobel_inst/wr_ptr_g[0]_i_1_n_0        |                3 |             10 |         3.33 |
+|  rvx_instance/accel_inst/div/inst/clk_out1 | rvx_instance/accel_inst/vga/control/x_poi_reg[4]_1[0]       | reset_debounced                                               |                5 |             12 |         2.40 |
+|  clock_50mhz_BUFG                          |                                                             | rvx_instance/rvx_uart_instance/tx_register                    |                4 |             13 |         3.25 |
+|  rvx_instance/accel_inst/div/inst/clk_out2 | rvx_instance/accel_inst/init/sender/data_temp[31]_i_1_n_0   | reset_debounced                                               |                2 |             16 |         8.00 |
+|  rvx_instance/accel_inst/div/inst/clk_out1 |                                                             |                                                               |                8 |             18 |         2.25 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/csr_mie_msie_i_1_n_0         | rvx_instance/rvx_ram_instance/reset_internal                  |                9 |             19 |         2.11 |
+|  pclk_IBUF_BUFG                            | rvx_instance/accel_inst/get_pic/sel                         | rvx_instance/accel_inst/get_pic/clear                         |                5 |             19 |         3.80 |
+|  rvx_instance/accel_inst/vga/control/E[0]  |                                                             |                                                               |                5 |             19 |         3.80 |
+|  rvx_instance/accel_inst/div/inst/clk_out2 |                                                             |                                                               |               16 |             19 |         1.19 |
+|  rvx_instance/accel_inst/div/inst/clk_out2 |                                                             | rvx_instance/accel_inst/init/sender/count[20]_i_1_n_0         |                3 |             20 |         6.67 |
+|  pclk_IBUF_BUFG                            |                                                             | rvx_instance/accel_inst/get_pic/clear                         |                7 |             21 |         3.00 |
+|  pclk_IBUF_BUFG                            |                                                             | reset_debounced                                               |                6 |             24 |         4.00 |
+|  clock_50mhz_BUFG                          |                                                             |                                                               |               17 |             25 |         1.47 |
+|  clock_50mhz_BUFG                          |                                                             | reset_debounced                                               |               11 |             25 |         2.27 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/csr_mcause[31]_i_1_n_0       | rvx_instance/rvx_core_instance/csr_mcause[30]_i_1_n_0         |               17 |             26 |         1.53 |
+|  pclk_IBUF_BUFG                            | vsync_IBUF                                                  |                                                               |                9 |             28 |         3.11 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/csr_mepc[31]_i_1_n_0         | rvx_instance/rvx_ram_instance/reset_internal                  |                8 |             30 |         3.75 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/program_counter[31]_i_1_n_0  | rvx_instance/rvx_ram_instance/reset_internal                  |               15 |             31 |         2.07 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/csr_mtvec1                   | rvx_instance/rvx_ram_instance/reset_internal                  |               14 |             31 |         2.21 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[10][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               12 |             32 |         2.67 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[1][31]_i_1_n_0  | rvx_instance/rvx_ram_instance/reset_internal                  |               12 |             32 |         2.67 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[19][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |                8 |             32 |         4.00 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[18][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |                9 |             32 |         3.56 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[17][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               10 |             32 |         3.20 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[16][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               12 |             32 |         2.67 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[15][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               11 |             32 |         2.91 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[14][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               13 |             32 |         2.46 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[13][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               16 |             32 |         2.00 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[12][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               10 |             32 |         3.20 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[11][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               12 |             32 |         2.67 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[21][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |                8 |             32 |         4.00 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file                 | rvx_instance/rvx_ram_instance/reset_internal                  |                9 |             32 |         3.56 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/csr_mtval[31]_i_1_n_0        | rvx_instance/rvx_ram_instance/reset_internal                  |               15 |             32 |         2.13 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/csr_mscratch[31]_i_1_n_0     | rvx_instance/rvx_ram_instance/reset_internal                  |               18 |             32 |         1.78 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/csr_minstret[63]_i_1_n_0     | rvx_instance/rvx_ram_instance/reset_internal                  |                8 |             32 |         4.00 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/csr_minstret[31]_i_1_n_0     | rvx_instance/rvx_ram_instance/reset_internal                  |               11 |             32 |         2.91 |
+|  clock_50mhz_BUFG                          |                                                             | rvx_instance/rvx_uart_instance/rx_cycle_counter[0]_i_1_n_0    |                8 |             32 |         4.00 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/prev_rw_address_reg[2]_2[0]  | reset_debounced                                               |               10 |             32 |         3.20 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[20][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               12 |             32 |         2.67 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[22][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               12 |             32 |         2.67 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[23][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               14 |             32 |         2.29 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[24][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               13 |             32 |         2.46 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[25][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               12 |             32 |         2.67 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[26][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               14 |             32 |         2.29 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[27][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               13 |             32 |         2.46 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[28][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               12 |             32 |         2.67 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[29][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               12 |             32 |         2.67 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[2][31]_i_1_n_0  | rvx_instance/rvx_ram_instance/reset_internal                  |               11 |             32 |         2.91 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[30][31]_i_1_n_0 | rvx_instance/rvx_ram_instance/reset_internal                  |               13 |             32 |         2.46 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[3][31]_i_1_n_0  | rvx_instance/rvx_ram_instance/reset_internal                  |                8 |             32 |         4.00 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[4][31]_i_1_n_0  | rvx_instance/rvx_ram_instance/reset_internal                  |               11 |             32 |         2.91 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[5][31]_i_1_n_0  | rvx_instance/rvx_ram_instance/reset_internal                  |               10 |             32 |         3.20 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[6][31]_i_1_n_0  | rvx_instance/rvx_ram_instance/reset_internal                  |               14 |             32 |         2.29 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[7][31]_i_1_n_0  | rvx_instance/rvx_ram_instance/reset_internal                  |               15 |             32 |         2.13 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[8][31]_i_1_n_0  | rvx_instance/rvx_ram_instance/reset_internal                  |                9 |             32 |         3.56 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/integer_file[9][31]_i_1_n_0  | rvx_instance/rvx_ram_instance/reset_internal                  |               12 |             32 |         2.67 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/prev_read_request_reg_4[0]   | reset_debounced                                               |                8 |             32 |         4.00 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/prev_rw_address_reg[2]_2[1]  | reset_debounced                                               |                8 |             32 |         4.00 |
+|  pclk_IBUF_BUFG                            | rvx_instance/accel_inst/sobel_inst/s_v_d1                   |                                                               |               13 |             54 |         4.15 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_core_instance/cr_en_reg[0]                 | reset_debounced                                               |               18 |             64 |         3.56 |
+|  pclk_IBUF_BUFG                            | rvx_instance/accel_inst/sobel_inst/g_v_d1                   |                                                               |               25 |             96 |         3.84 |
+|  clock_50mhz_BUFG                          |                                                             | rvx_instance/rvx_ram_instance/reset_internal                  |               30 |             98 |         3.27 |
+|  clock_50mhz_BUFG                          | rvx_instance/rvx_bus_instance/E[0]                          | rvx_instance/rvx_ram_instance/reset_internal                  |               52 |            101 |         1.94 |
+|  pclk_IBUF_BUFG                            |                                                             |                                                               |               56 |            171 |         3.05 |
++--------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------+------------------+----------------+--------------+
+
+

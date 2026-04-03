@@ -1,0 +1,488 @@
+
+*** Running vivado
+    with args -log rvx_cam_nexys.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rvx_cam_nexys.tcl
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Wed Apr  1 21:45:43 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source rvx_cam_nexys.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/utils_1/imports/synth_1/rvx_cam_nexys.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/utils_1/imports/synth_1/rvx_cam_nexys.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top rvx_cam_nexys -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 30621
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2116.762 ; gain = 442.797 ; free physical = 292 ; free virtual = 2227
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'rvx_cam_nexys' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_cam_nexys.v:3]
+INFO: [Synth 8-6157] synthesizing module 'rvx' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx.v:8]
+	Parameter CLOCK_FREQUENCY bound to: 50000000 - type: integer 
+	Parameter UART_BAUD_RATE bound to: 9600 - type: integer 
+	Parameter MEMORY_SIZE bound to: 8192 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: gpio_cam.hex - type: string 
+	Parameter BOOT_ADDRESS bound to: 0 - type: integer 
+	Parameter GPIO_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'rvx_core' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_core.v:8]
+	Parameter BOOT_ADDRESS bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rvx_core' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_core.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_bus' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_bus.v:8]
+	Parameter NUM_DEVICES bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rvx_bus' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_bus.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_ram' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_ram.v:8]
+	Parameter MEMORY_SIZE bound to: 8192 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: gpio_cam.hex - type: string 
+INFO: [Synth 8-3876] $readmem data file 'gpio_cam.hex' is read successfully [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_ram.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'rvx_ram' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_ram.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_uart' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_uart.v:8]
+	Parameter CLOCK_FREQUENCY bound to: 50000000 - type: integer 
+	Parameter UART_BAUD_RATE bound to: 9600 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rvx_uart' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_uart.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_mtimer' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_mtimer.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'rvx_mtimer' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_mtimer.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_gpio' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_gpio.v:8]
+	Parameter GPIO_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rvx_gpio' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_gpio.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_spi' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_spi.v:8]
+	Parameter SPI_NUM_CHIP_SELECT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rvx_spi' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_spi.v:8]
+INFO: [Synth 8-6157] synthesizing module 'camera_top' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/camera_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.runs/synth_1/.Xil/Vivado-30526-aniruddha-HP-Laptop/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.runs/synth_1/.Xil/Vivado-30526-aniruddha-HP-Laptop/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'camera_init' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/camera_init.v:1]
+WARNING: [Synth 8-2898] ignoring pullup [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/camera_init.v:15]
+INFO: [Synth 8-6157] synthesizing module 'reg_init' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/reg_init.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'reg_init' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/reg_init.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sccb_sender' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/sccb_sender.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sccb_sender' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/sccb_sender.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'camera_init' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/camera_init.v:1]
+INFO: [Synth 8-6157] synthesizing module 'camera_get_pic' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/camera_get_pic.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'camera_get_pic' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/camera_get_pic.v:1]
+INFO: [Synth 8-6157] synthesizing module 'gaussian_sobel_pipeline' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'gaussian_sobel_pipeline' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:3]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.runs/synth_1/.Xil/Vivado-30526-aniruddha-HP-Laptop/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.runs/synth_1/.Xil/Vivado-30526-aniruddha-HP-Laptop/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vga_display' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/vga_display.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_control' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/vga_control.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'vga_control' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/vga_control.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'vga_display' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/vga_display.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'camera_top' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/camera_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'rvx' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'rvx_cam_nexys' (0#1) [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_cam_nexys.v:3]
+WARNING: [Synth 8-6014] Unused sequential element tot_R_reg was removed.  [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:136]
+WARNING: [Synth 8-6014] Unused sequential element tot_G_reg was removed.  [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:137]
+WARNING: [Synth 8-6014] Unused sequential element tot_B_reg was removed.  [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sum_G_reg was removed.  [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:200]
+WARNING: [Synth 8-7129] Port rst in module camera_get_pic is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2219.699 ; gain = 545.734 ; free physical = 156 ; free virtual = 2094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2237.512 ; gain = 563.547 ; free physical = 157 ; free virtual = 2096
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2237.512 ; gain = 563.547 ; free physical = 157 ; free virtual = 2096
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2237.512 ; gain = 0.000 ; free physical = 156 ; free virtual = 2095
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/animandal/vivado_projects/rvx_cam/ov2640_nexys.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'rvx_instance/accel_inst/buffer'
+Finished Parsing XDC File [/home/animandal/vivado_projects/rvx_cam/ov2640_nexys.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'rvx_instance/accel_inst/buffer'
+Parsing XDC File [/home/animandal/vivado_projects/rvx_cam/ov2640_nexys.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'rvx_instance/accel_inst/div'
+Finished Parsing XDC File [/home/animandal/vivado_projects/rvx_cam/ov2640_nexys.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'rvx_instance/accel_inst/div'
+Parsing XDC File [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc]
+WARNING: [Vivado 12-2489] -period contains time 41.666660 which will be rounded to 41.667 to ensure it is an integer multiple of 1 picosecond [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc:10]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_wiz_0'. [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc:22]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc:22]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_out2_clk_wiz_0]'. [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc:22]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc:22]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_wiz_0'. [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc:28]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc:28]
+Finished Parsing XDC File [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/rvx_cam_nexys_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rvx_cam_nexys_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/rvx_cam_nexys_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2357.250 ; gain = 0.000 ; free physical = 193 ; free virtual = 2140
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2357.285 ; gain = 0.000 ; free physical = 190 ; free virtual = 2137
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2357.285 ; gain = 683.320 ; free physical = 196 ; free virtual = 2143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2365.254 ; gain = 691.289 ; free physical = 196 ; free virtual = 2143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2365.254 ; gain = 691.289 ; free physical = 196 ; free virtual = 2143
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'rvx_core'
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'rvx_spi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+             STATE_RESET |                             0001 |                             0001
+         STATE_OPERATING |                             0010 |                             0010
+        STATE_TRAP_TAKEN |                             0100 |                             0100
+       STATE_TRAP_RETURN |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'rvx_core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               SPI_READY |                             0001 |                             0001
+                SPI_CPOL |                             0100 |                             0100
+              SPI_CPOL_N |                             1000 |                             1000
+                SPI_IDLE |                             0010 |                             0010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'curr_state_reg' in module 'rvx_spi'
+WARNING: [Synth 8-327] inferring latch for variable 'ram_addr_reg' [/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/vga_display.v:32]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2365.254 ; gain = 691.289 ; free physical = 190 ; free virtual = 2139
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 9     
+	   2 Input   21 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 3     
+	   2 Input   10 Bit       Adders := 4     
+	   7 Input    9 Bit       Adders := 2     
+	   4 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   3 Input    8 Bit       Adders := 6     
+	   3 Input    7 Bit       Adders := 6     
+	   3 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               64 Bit    Registers := 5     
+	               32 Bit    Registers := 48    
+	               21 Bit    Registers := 1     
+	               19 Bit    Registers := 9     
+	               16 Bit    Registers := 4     
+	               12 Bit    Registers := 19    
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 11    
+	                7 Bit    Registers := 6     
+	                6 Bit    Registers := 11    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 55    
++---RAMs : 
+	              64K Bit	(2048 X 32 bit)          RAMs := 1     
+	              12K Bit	(1024 X 12 bit)          RAMs := 3     
+	               6K Bit	(1024 X 6 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 12    
+	   2 Input   32 Bit        Muxes := 87    
+	   4 Input   32 Bit        Muxes := 23    
+	   5 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   31 Bit        Muxes := 2     
+	   2 Input   24 Bit        Muxes := 1     
+	   2 Input   19 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 4     
+	   3 Input   12 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 31    
+	   4 Input    4 Bit        Muxes := 5     
+	   3 Input    4 Bit        Muxes := 4     
+	   7 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 86    
+	   6 Input    1 Bit        Muxes := 8     
+	   3 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 7     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP vga/ram_addr1, operation Mode is: (D'+(A:0x3fffffdd))*(B:0x280).
+DSP Report: register vga/control/y_poi_reg is absorbed into DSP vga/ram_addr1.
+DSP Report: operator vga/ram_addr1 is absorbed into DSP vga/ram_addr1.
+DSP Report: operator vga/ram_addr2 is absorbed into DSP vga/ram_addr1.
+DSP Report: Generating DSP vga/ram_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0x7ff70).
+DSP Report: operator vga/ram_addr0 is absorbed into DSP vga/ram_addr0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:01:26 . Memory (MB): peak = 2498.770 ; gain = 824.805 ; free physical = 178 ; free virtual = 1947
+---------------------------------------------------------------------------------
+ Sort Area is  vga/ram_addr1_0 : 0 0 : 240 324 : Used 1 time 0
+ Sort Area is  vga/ram_addr1_0 : 0 1 : 84 324 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                   | RTL Object                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|rvx_instance/rvx_ram_instance | ram_reg                    | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|rvx_instance/accel_inst       | sobel_inst/s_gray_buf1_reg | 1 K x 6(READ_FIRST)    | W |   | 1 K x 6(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst       | sobel_inst/s_gray_buf2_reg | 1 K x 6(READ_FIRST)    | W |   | 1 K x 6(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst       | sobel_inst/s_color_buf_reg | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst       | sobel_inst/g_rgb_buf1_reg  | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst       | sobel_inst/g_rgb_buf2_reg  | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|camera_top  | (D'+(A:0x3fffffdd))*(B:0x280) | 19     | 10     | -      | 12     | 29     | 0    | 0    | -    | 1    | 0     | 0    | 0    | 
+|camera_top  | PCIN+(A:0x0):B+(C:0x7ff70)    | 30     | 12     | 19     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+-------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:32 ; elapsed = 00:01:34 . Memory (MB): peak = 2498.770 ; gain = 824.805 ; free physical = 169 ; free virtual = 1945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:52 ; elapsed = 00:01:54 . Memory (MB): peak = 2515.793 ; gain = 841.828 ; free physical = 139 ; free virtual = 1916
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                   | RTL Object                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|rvx_instance/rvx_ram_instance | ram_reg                    | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|rvx_instance/accel_inst       | sobel_inst/s_gray_buf1_reg | 1 K x 6(READ_FIRST)    | W |   | 1 K x 6(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst       | sobel_inst/s_gray_buf2_reg | 1 K x 6(READ_FIRST)    | W |   | 1 K x 6(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst       | sobel_inst/s_color_buf_reg | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst       | sobel_inst/g_rgb_buf1_reg  | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst       | sobel_inst/g_rgb_buf2_reg  | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance rvx_instance/rvx_ram_instance/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance rvx_instance/rvx_ram_instance/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance rvx_instance/accel_inst/sobel_inst/s_gray_buf1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance rvx_instance/accel_inst/sobel_inst/g_rgb_buf1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:00 ; elapsed = 00:02:02 . Memory (MB): peak = 2579.809 ; gain = 905.844 ; free physical = 132 ; free virtual = 1860
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:05 ; elapsed = 00:02:07 . Memory (MB): peak = 2673.621 ; gain = 999.656 ; free physical = 139 ; free virtual = 1797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:05 ; elapsed = 00:02:07 . Memory (MB): peak = 2673.621 ; gain = 999.656 ; free physical = 139 ; free virtual = 1797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:06 ; elapsed = 00:02:08 . Memory (MB): peak = 2673.621 ; gain = 999.656 ; free physical = 125 ; free virtual = 1784
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:06 ; elapsed = 00:02:08 . Memory (MB): peak = 2673.621 ; gain = 999.656 ; free physical = 125 ; free virtual = 1784
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:06 ; elapsed = 00:02:08 . Memory (MB): peak = 2677.590 ; gain = 1003.625 ; free physical = 125 ; free virtual = 1784
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:06 ; elapsed = 00:02:08 . Memory (MB): peak = 2677.590 ; gain = 1003.625 ; free physical = 125 ; free virtual = 1784
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------+---------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name   | RTL Name                                          | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------+---------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|rvx_cam_nexys | rvx_instance/accel_inst/sobel_inst/g_v_d4_reg     | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|rvx_cam_nexys | rvx_instance/accel_inst/sobel_inst/s_a_d3_reg[18] | 7      | 19    | NO           | NO                 | NO                | 19     | 0       | 
++--------------+---------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|camera_top  | D'+A*B       | 30     | 10     | -      | 12     | 0      | 0    | 0    | -    | 1    | 0     | 0    | 0    | 
+|camera_top  | PCIN+A':B'+C | 0      | 10     | -      | -      | 19     | 1    | 1    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |blk_mem_gen_0 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |blk_mem_gen |     1|
+|2     |clk_wiz     |     1|
+|3     |BUFG        |     3|
+|4     |CARRY4      |   203|
+|5     |DSP48E1     |     2|
+|7     |LUT1        |    34|
+|8     |LUT2        |   155|
+|9     |LUT3        |   425|
+|10    |LUT4        |   491|
+|11    |LUT5        |   651|
+|12    |LUT6        |  1397|
+|13    |MUXF7       |   314|
+|14    |RAMB18E1    |     5|
+|16    |RAMB36E1    |     2|
+|18    |SRL16E      |    20|
+|19    |FDRE        |  2218|
+|20    |FDSE        |   109|
+|21    |LD          |    19|
+|22    |IBUF        |    14|
+|23    |IOBUF       |     3|
+|24    |OBUF        |    19|
+|25    |OBUFT       |     1|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:06 ; elapsed = 00:02:08 . Memory (MB): peak = 2677.590 ; gain = 1003.625 ; free physical = 125 ; free virtual = 1784
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:03 ; elapsed = 00:02:05 . Memory (MB): peak = 2677.590 ; gain = 883.852 ; free physical = 159 ; free virtual = 1776
+Synthesis Optimization Complete : Time (s): cpu = 00:02:06 ; elapsed = 00:02:08 . Memory (MB): peak = 2677.598 ; gain = 1003.625 ; free physical = 159 ; free virtual = 1776
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2677.598 ; gain = 0.000 ; free physical = 321 ; free virtual = 1938
+INFO: [Netlist 29-17] Analyzing 548 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2733.617 ; gain = 0.000 ; free physical = 319 ; free virtual = 1937
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 22 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 3 instances
+  LD => LDCE: 19 instances
+
+Synth Design complete | Checksum: e9057498
+INFO: [Common 17-83] Releasing license: Synthesis
+70 Infos, 12 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:18 ; elapsed = 00:02:17 . Memory (MB): peak = 2733.652 ; gain = 1180.023 ; free physical = 320 ; free virtual = 1937
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2079.735; main = 2044.306; forked = 313.484
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3487.691; main = 2733.621; forked = 963.887
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2757.629 ; gain = 0.000 ; free physical = 319 ; free virtual = 1937
+INFO: [Common 17-1381] The checkpoint '/home/animandal/vivado_projects/rvx_cam/rvx_cam.runs/synth_1/rvx_cam_nexys.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file rvx_cam_nexys_utilization_synth.rpt -pb rvx_cam_nexys_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  1 21:48:07 2026...

@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Feb  9 12:08:22 2026
+# Process ID         : 11349
+# Current directory  : /home/animandal/vivado_projects/ov2640_nexys/ov2640_nexys.runs/blk_mem_gen_0_synth_1
+# Command line       : vivado -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
+# Log file           : /home/animandal/vivado_projects/ov2640_nexys/ov2640_nexys.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
+# Journal file       : /home/animandal/vivado_projects/ov2640_nexys/ov2640_nexys.runs/blk_mem_gen_0_synth_1/vivado.jou
+# Running On         : aniruddha-HP-Laptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+# CPU Frequency      : 3399.564 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 8224 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 12519 MB
+# Available Virtual  : 9804 MB
+#-----------------------------------------------------------
+source blk_mem_gen_0.tcl -notrace

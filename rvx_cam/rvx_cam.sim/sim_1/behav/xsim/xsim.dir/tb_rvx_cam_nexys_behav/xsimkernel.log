@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_rvx_cam_nexys_behav/xsimk -simmode gui -wdb tb_rvx_cam_nexys_behav.wdb -simrunnum 0 -socket 57701
+Design successfully loaded
+Design Loading Memory Usage: 182508 KB (Peak: 182508 KB)
+Design Loading CPU Usage: 1510 ms
+Simulation completed
+Simulation Memory Usage: 265000 KB (Peak: 321776 KB)
+Simulation CPU Usage: 259800 ms

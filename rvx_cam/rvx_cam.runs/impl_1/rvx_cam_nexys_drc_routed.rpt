@@ -1,0 +1,53 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Wed Apr  1 21:51:07 2026
+| Host         : aniruddha-HP-Laptop running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_drc -file rvx_cam_nexys_drc_routed.rpt -pb rvx_cam_nexys_drc_routed.pb -rpx rvx_cam_nexys_drc_routed.rpx
+| Design       : rvx_cam_nexys
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 3
++----------+----------+---------------------------------+--------+
+| Rule     | Severity | Description                     | Checks |
++----------+----------+---------------------------------+--------+
+| DPOP-1   | Warning  | PREG Output pipelining          | 1      |
+| PDRC-153 | Warning  | Gated clock check               | 1      |
+| RPBF-3   | Warning  | IO port buffering is incomplete | 1      |
++----------+----------+---------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP rvx_instance/accel_inst/vga/ram_addr0 output rvx_instance/accel_inst/vga/ram_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net rvx_instance/accel_inst/vga/control/E[0] is a gated clock net sourced by a combinational pin rvx_instance/accel_inst/vga/control/ram_addr_reg[18]_i_1/O, cell rvx_instance/accel_inst/vga/control/ram_addr_reg[18]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port sio_d expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+
