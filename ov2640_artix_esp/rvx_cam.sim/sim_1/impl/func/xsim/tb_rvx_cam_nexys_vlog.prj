@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "../../../../../ov2640_nexys.gen/sources_1/ip/clk_wiz_0" \
+"tb_rvx_cam_nexys_func_impl.v" \
+"../../../../../rvx_cam.srcs/sim_1/new/tb_rvx_cam_nexys.v" \
+
+# Do not sort compile order
+nosort
