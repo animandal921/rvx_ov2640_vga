@@ -59,6 +59,39 @@ graph LR
 
 ## Hardware Wiring (Arty A7 to ESP32)
 
+### 1. OV2640 Camera to Arty A7 (Pmod `JA` & `JB`)
+
+All camera data lines are mapped to **Pmod `JA`** and all control/synchronization signals are mapped to **Pmod `JB`** (`IOSTANDARD LVCMOS33`).
+
+#### Camera Data Bus (Pmod `JA`)
+
+| OV2640 Pin | Top-Level RTL Port | Arty A7 Pmod Pin | FPGA Package Pin | Direction |
+| :--- | :--- | :--- | :--- | :--- |
+| **D7** (MSB) | `camera_data[7]` | **JA1** | `G13` | Camera $\rightarrow$ FPGA |
+| **D6** | `camera_data[6]` | **JA2** | `B11` | Camera $\rightarrow$ FPGA |
+| **D5** | `camera_data[5]` | **JA3** | `A11` | Camera $\rightarrow$ FPGA |
+| **D4** | `camera_data[4]` | **JA4** | `D12` | Camera $\rightarrow$ FPGA |
+| **D3** | `camera_data[3]` | **JA7** | `D13` | Camera $\rightarrow$ FPGA |
+| **D2** | `camera_data[2]` | **JA8** | `B18` | Camera $\rightarrow$ FPGA |
+| **D1** | `camera_data[1]` | **JA9** | `A18` | Camera $\rightarrow$ FPGA |
+| **D0** (LSB) | `camera_data[0]` | **JA10** | `K16` | Camera $\rightarrow$ FPGA |
+
+#### Camera Control, Clocks & Power (Pmod `JB`)
+
+| OV2640 Pin | Top-Level RTL Port | Arty A7 Pmod Pin | FPGA Package Pin | Direction | Description |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **SIOD** (`SDA`) | `sio_d` | **JB1** | `E15` | Bidirectional | SCCB serial data (slave `0x60`) |
+| **PCLK** | `pclk` | **JB2** | `E16` | Camera $\rightarrow$ FPGA | Pixel clock input ($\approx 24\text{ MHz}$) |
+| **SIOC** (`SCL`) | `sio_c` | **JB3** | `D15` | FPGA $\rightarrow$ Camera | SCCB serial clock |
+| **VSYNC** | `vsync` | **JB4** | `C15` | Camera $\rightarrow$ FPGA | Vertical frame sync |
+| **HREF** | `href` | **JB7** | `J17` | Camera $\rightarrow$ FPGA | Horizontal active-row reference |
+| **XCLK** (`MCLK`) | `xclk` | **JB8** | `J18` | FPGA $\rightarrow$ Camera | Master clock output from `clk_wiz_0` |
+| **PWDN** | `cam_pwdn` | **JB9** | `K15` | FPGA $\rightarrow$ Camera | Power-down control |
+| **RESET** (`RET`) | `cam_reset` | **JB10** | `J15` | FPGA $\rightarrow$ Camera | Active-low hardware reset |
+| **GND** | — | **JA5 / JA11 / JB5 / JB11** | — | Shared | Common ground |
+| **3V3** (`VCC`) | — | **JA6 / JA12 / JB6 / JB12** | — | Power | $3.3\text{ V}$ power rail |
+
+---
 Connect the Arty A7 Arduino header pins to the ESP32 using **short, tightly bundled jumper wires**.
 
 > **Critical Wiring Notes:**
