@@ -127,7 +127,8 @@ Connect the Arty A7 Arduino header pins to the ESP32 using **short, tightly bund
 * `gpio_cam.hex` — Compiled bare-metal RISC-V C firmware preloaded into `rvx_ram`.
 
 ### ESP32 (Arduino C++)
-* `parallel.ino` — Dual-core FreeRTOS receiver using `REG_READ(GPIO_IN_REG)`, row-level interrupt gating (`noInterrupts()` / `interrupts()`), a pixel-count forgiveness threshold ($\ge 76,600 / 76,800$ bytes), and a binary WebSocket server (port `81`) serving an HTML5 `<canvas>` client (port `80`).
+* `parallel.ino` — Dual-core FreeRTOS receiver using `REG_READ(GPIO_IN_REG)`
+*  binary WebSocket server (port `81`) serving an HTML5 `<canvas>` client (port `80`).
 
 ---
 
@@ -143,7 +144,7 @@ Connect the Arty A7 Arduino header pins to the ESP32 using **short, tightly bund
 3. **View Live Stream:**
    * Open `http://<ESP32_IP_ADDRESS>/` in a browser on the same Wi-Fi network.
 Note Flash and start ESP32 webserver before sending camera output data from Artix (FPGA) 
-safe way to verify is if the ip address appears on the terminal the esp has initialised the webserver and is ready to accept data from the FPGA
+safe way to verify - if the ip address appears on the terminal then esp has initialised the webserver and is ready to accept data from the FPGA
 if it is stuck in loop then turn off the data coming from FPGA (either by toggling sw0 or powering off the FPGA)
 ---
 
