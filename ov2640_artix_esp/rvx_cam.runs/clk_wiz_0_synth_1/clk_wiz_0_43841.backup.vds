@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Sun Mar 29 23:40:20 2026
+# Process ID         : 43841
+# Current directory  : /home/animandal/vivado_projects/rvx_cam/rvx_cam.runs/clk_wiz_0_synth_1
+# Command line       : vivado -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
+# Log file           : /home/animandal/vivado_projects/rvx_cam/rvx_cam.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
+# Journal file       : /home/animandal/vivado_projects/rvx_cam/rvx_cam.runs/clk_wiz_0_synth_1/vivado.jou
+# Running On         : aniruddha-HP-Laptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+# CPU Frequency      : 3398.386 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 8222 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 12517 MB
+# Available Virtual  : 6201 MB
+#-----------------------------------------------------------
+source clk_wiz_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:06 . Memory (MB): peak = 1540.395 ; gain = 174.059 ; free physical = 194 ; free virtual = 5527
+Command: synth_design -top clk_wiz_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 44003

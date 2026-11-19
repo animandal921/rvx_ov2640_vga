@@ -1,0 +1,474 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Nov 19 12:00:06 2026
+# Process ID         : 3116
+# Current directory  : C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.runs/synth_1
+# Command line       : vivado.exe -log rvx_cam_nexys.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rvx_cam_nexys.tcl
+# Log file           : C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.runs/synth_1/rvx_cam_nexys.vds
+# Journal file       : C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.runs/synth_1\vivado.jou
+# Running On         : Ninad
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 5 5600U with Radeon Graphics         
+# CPU Frequency      : 2296 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16487 MB
+# Swap memory        : 11811 MB
+# Total Virtual      : 28299 MB
+# Available Virtual  : 13859 MB
+#-----------------------------------------------------------
+source rvx_cam_nexys.tcl -notrace
+create_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 540.824 ; gain = 219.086
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/utils_1/imports/synth_1/rvx_cam_nexys.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/utils_1/imports/synth_1/rvx_cam_nexys.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top rvx_cam_nexys -part xc7a100tcsg324-1
+Starting synth_design
+INFO: [IP_Flow 19-2162] IP 'blk_mem_gen_0' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'blk_mem_gen_0' (customized with software release 2025.1) has a different revision in the IP Catalog.
+INFO: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* IP definition 'Clocking Wizard (6.0)' for IP 'clk_wiz_0' (customized with software release 2025.1) has a different revision in the IP Catalog. * This IP has board specific outputs. Current project board 'unset' and the board 'digilentinc.com:nexys4:part0:1.1' used to customize the IP 'clk_wiz_0' do not match.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21248
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1305.816 ; gain = 543.523
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'rvx_cam_nexys' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_cam_nexys.v:3]
+INFO: [Synth 8-6157] synthesizing module 'rvx' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx.v:8]
+	Parameter CLOCK_FREQUENCY bound to: 50000000 - type: integer 
+	Parameter UART_BAUD_RATE bound to: 9600 - type: integer 
+	Parameter MEMORY_SIZE bound to: 8192 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: gpio_cam.hex - type: string 
+	Parameter BOOT_ADDRESS bound to: 0 - type: integer 
+	Parameter GPIO_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'rvx_core' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_core.v:8]
+	Parameter BOOT_ADDRESS bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rvx_core' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_core.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_bus' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_bus.v:8]
+	Parameter NUM_DEVICES bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rvx_bus' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_bus.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_ram' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_ram.v:8]
+	Parameter MEMORY_SIZE bound to: 8192 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: gpio_cam.hex - type: string 
+INFO: [Synth 8-3876] $readmem data file 'gpio_cam.hex' is read successfully [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_ram.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'rvx_ram' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_ram.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_uart' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_uart.v:8]
+	Parameter CLOCK_FREQUENCY bound to: 50000000 - type: integer 
+	Parameter UART_BAUD_RATE bound to: 9600 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rvx_uart' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_uart.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_mtimer' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_mtimer.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'rvx_mtimer' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_mtimer.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_gpio' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_gpio.v:8]
+	Parameter GPIO_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rvx_gpio' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_gpio.v:8]
+INFO: [Synth 8-6157] synthesizing module 'rvx_spi' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_spi.v:8]
+	Parameter SPI_NUM_CHIP_SELECT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rvx_spi' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_spi.v:8]
+INFO: [Synth 8-6157] synthesizing module 'camera_top' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/camera_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.runs/synth_1/.Xil/Vivado-3116-Ninad/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.runs/synth_1/.Xil/Vivado-3116-Ninad/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'camera_init' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/camera_init.v:1]
+WARNING: [Synth 8-2898] ignoring pullup [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/camera_init.v:15]
+INFO: [Synth 8-6157] synthesizing module 'reg_init' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/reg_init.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'reg_init' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/reg_init.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sccb_sender' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/sccb_sender.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sccb_sender' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/sccb_sender.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'camera_init' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/camera_init.v:1]
+INFO: [Synth 8-6157] synthesizing module 'camera_get_pic' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/camera_get_pic.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'camera_get_pic' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/camera_get_pic.v:1]
+INFO: [Synth 8-6157] synthesizing module 'gaussian_sobel_pipeline' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'gaussian_sobel_pipeline' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:3]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.runs/synth_1/.Xil/Vivado-3116-Ninad/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.runs/synth_1/.Xil/Vivado-3116-Ninad/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'parallel_streamer' [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/new/parallel_streamer.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/new/parallel_streamer.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_streamer' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/new/parallel_streamer.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'camera_top' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/camera_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'rvx' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'rvx_cam_nexys' (0#1) [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/imports/rvx_cam_nexys.v:3]
+WARNING: [Synth 8-6014] Unused sequential element tot_R_reg was removed.  [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:136]
+WARNING: [Synth 8-6014] Unused sequential element tot_G_reg was removed.  [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:137]
+WARNING: [Synth 8-6014] Unused sequential element tot_B_reg was removed.  [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:138]
+WARNING: [Synth 8-6014] Unused sequential element sum_G_reg was removed.  [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/sources_1/new/gaussian_sobel_pipeline.v:200]
+WARNING: [Synth 8-7129] Port rst in module camera_get_pic is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1459.391 ; gain = 697.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1459.391 ; gain = 697.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1459.391 ; gain = 697.098
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 1459.391 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/ov2640_nexys.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'rvx_instance/accel_inst/stream_buffer'
+Finished Parsing XDC File [c:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/ov2640_nexys.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'rvx_instance/accel_inst/stream_buffer'
+Parsing XDC File [c:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/ov2640_nexys.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'rvx_instance/accel_inst/div'
+Finished Parsing XDC File [c:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/ov2640_nexys.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'rvx_instance/accel_inst/div'
+Parsing XDC File [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc]
+WARNING: [Vivado 12-2489] -period contains time 41.666660 which will be rounded to 41.667 to ensure it is an integer multiple of 1 picosecond [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc:8]
+WARNING: [Vivado 12-507] No nets matched 'pclk_IBUF'. [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc:101]
+Finished Parsing XDC File [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/rvx_cam_nexys_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.srcs/constrs_1/new/rvx_cam_nexys.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rvx_cam_nexys_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/rvx_cam_nexys_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1536.141 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1536.141 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1536.141 ; gain = 773.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1536.141 ; gain = 773.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1536.141 ; gain = 773.848
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'rvx_core'
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'rvx_spi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'parallel_streamer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             STATE_RESET |                             0001 |                             0001
+         STATE_OPERATING |                             0010 |                             0010
+        STATE_TRAP_TAKEN |                             0100 |                             0100
+       STATE_TRAP_RETURN |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'rvx_core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               SPI_READY |                             0001 |                             0001
+                SPI_CPOL |                             0100 |                             0100
+              SPI_CPOL_N |                             1000 |                             1000
+                SPI_IDLE |                             0010 |                             0010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'one-hot' in module 'rvx_spi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                            00001 |                              000
+                 S_VSYNC |                            00010 |                              001
+                  S_WAIT |                            00100 |                              010
+                   S_ROW |                            01000 |                              011
+                S_HBLANK |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'parallel_streamer'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1536.141 ; gain = 773.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 9     
+	   2 Input   21 Bit       Adders := 1     
+	   2 Input   19 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 4     
+	   7 Input    9 Bit       Adders := 2     
+	   4 Input    9 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   3 Input    8 Bit       Adders := 6     
+	   3 Input    7 Bit       Adders := 6     
+	   3 Input    6 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               64 Bit    Registers := 5     
+	               32 Bit    Registers := 48    
+	               21 Bit    Registers := 1     
+	               19 Bit    Registers := 10    
+	               16 Bit    Registers := 4     
+	               12 Bit    Registers := 18    
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 12    
+	                7 Bit    Registers := 6     
+	                6 Bit    Registers := 12    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 58    
++---RAMs : 
+	              64K Bit	(2048 X 32 bit)          RAMs := 1     
+	              12K Bit	(1024 X 12 bit)          RAMs := 3     
+	               6K Bit	(1024 X 6 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 9     
+	   2 Input   32 Bit        Muxes := 87    
+	   4 Input   32 Bit        Muxes := 23    
+	   5 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   31 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 1     
+	   5 Input   19 Bit        Muxes := 1     
+	   2 Input   19 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 4     
+	   3 Input   12 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 2     
+	   5 Input    9 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 2     
+	   5 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 25    
+	   5 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 4     
+	   7 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 4     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 85    
+	   6 Input    1 Bit        Muxes := 8     
+	   5 Input    1 Bit        Muxes := 11    
+	   4 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:53 ; elapsed = 00:01:56 . Memory (MB): peak = 1775.520 ; gain = 1013.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name             | RTL Object                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|rvx_instance            | rvx_ram_instance/ram_reg   | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|rvx_instance/accel_inst | sobel_inst/s_gray_buf1_reg | 1 K x 6(READ_FIRST)    | W |   | 1 K x 6(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst | sobel_inst/s_gray_buf2_reg | 1 K x 6(READ_FIRST)    | W |   | 1 K x 6(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst | sobel_inst/s_color_buf_reg | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst | sobel_inst/g_rgb_buf1_reg  | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst | sobel_inst/g_rgb_buf2_reg  | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:59 ; elapsed = 00:02:02 . Memory (MB): peak = 1775.520 ; gain = 1013.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:20 ; elapsed = 00:02:23 . Memory (MB): peak = 1775.520 ; gain = 1013.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name             | RTL Object                 | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|rvx_instance            | rvx_ram_instance/ram_reg   | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|rvx_instance/accel_inst | sobel_inst/s_gray_buf1_reg | 1 K x 6(READ_FIRST)    | W |   | 1 K x 6(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst | sobel_inst/s_gray_buf2_reg | 1 K x 6(READ_FIRST)    | W |   | 1 K x 6(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst | sobel_inst/s_color_buf_reg | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst | sobel_inst/g_rgb_buf1_reg  | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|rvx_instance/accel_inst | sobel_inst/g_rgb_buf2_reg  | 1 K x 12(READ_FIRST)   | W |   | 1 K x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------------------+----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance rvx_instance/rvx_ram_instance/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance rvx_instance/rvx_ram_instance/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance rvx_instance/accel_inst/sobel_inst/s_gray_buf1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance rvx_instance/accel_inst/sobel_inst/g_rgb_buf1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:29 ; elapsed = 00:02:33 . Memory (MB): peak = 1775.520 ; gain = 1013.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:35 ; elapsed = 00:02:39 . Memory (MB): peak = 1926.922 ; gain = 1164.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:35 ; elapsed = 00:02:39 . Memory (MB): peak = 1926.922 ; gain = 1164.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:35 ; elapsed = 00:02:39 . Memory (MB): peak = 1926.922 ; gain = 1164.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:35 ; elapsed = 00:02:39 . Memory (MB): peak = 1926.922 ; gain = 1164.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:36 ; elapsed = 00:02:39 . Memory (MB): peak = 1929.914 ; gain = 1167.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:36 ; elapsed = 00:02:39 . Memory (MB): peak = 1929.914 ; gain = 1167.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------+---------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name   | RTL Name                                          | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------+---------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|rvx_cam_nexys | rvx_instance/accel_inst/sobel_inst/s_a_d3_reg[18] | 7      | 19    | NO           | NO                 | NO                | 19     | 0       | 
+|rvx_cam_nexys | rvx_instance/accel_inst/sobel_inst/g_v_d4_reg     | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++--------------+---------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |blk_mem_gen_0 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |blk_mem_gen |     1|
+|2     |clk_wiz     |     1|
+|3     |BUFG        |     3|
+|4     |CARRY4      |   199|
+|5     |LUT1        |    21|
+|6     |LUT2        |   200|
+|7     |LUT3        |   441|
+|8     |LUT4        |   494|
+|9     |LUT5        |   584|
+|10    |LUT6        |  1433|
+|11    |MUXF7       |   319|
+|12    |RAMB18E1    |     5|
+|14    |RAMB36E1    |     2|
+|16    |SRL16E      |    20|
+|17    |FDRE        |  2253|
+|18    |FDSE        |   111|
+|19    |IBUF        |    14|
+|20    |IOBUF       |     3|
+|21    |OBUF        |    34|
+|22    |OBUFT       |     1|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:36 ; elapsed = 00:02:39 . Memory (MB): peak = 1929.914 ; gain = 1167.621
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:11 ; elapsed = 00:02:36 . Memory (MB): peak = 1929.914 ; gain = 1090.871
+Synthesis Optimization Complete : Time (s): cpu = 00:02:36 ; elapsed = 00:02:40 . Memory (MB): peak = 1929.914 ; gain = 1167.621
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.093 . Memory (MB): peak = 1939.137 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 528 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1943.219 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 3 instances
+
+Synth Design complete | Checksum: a58eb5a4
+INFO: [Common 17-83] Releasing license: Synthesis
+71 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:45 ; elapsed = 00:03:11 . Memory (MB): peak = 1943.219 ; gain = 1385.043
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1943.219 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Director/Desktop/VIT/sem3/codes/rvx_cam_wireless_727_parallel/rvx_cam.runs/synth_1/rvx_cam_nexys.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file rvx_cam_nexys_utilization_synth.rpt -pb rvx_cam_nexys_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 19 12:03:41 2026...
