@@ -66,7 +66,7 @@ Connect the Arty A7 Arduino header pins to the ESP32 using **short, tightly bund
 > 1. **Contiguous Data GPIOs:** `D0`–`D6` must remain on `GPIO 13`–`19` (with `D7` on `GPIO 21`) so the ESP32 can unpack all 8 bits from a single `REG_READ(GPIO_IN_REG)` read.
 > 2. **Silkscreen Labels:** On most ESP32 dev boards, `GPIO 16` is labeled **`RX2`** and `GPIO 17` is labeled **`TX2`**.
 
-| Arty A7 Header (FPGA Pin) | ESP32 GPIO (Silkscreen) | Signal | Direction |
+| Arty A7 Header (FPGA Pin) | ESP32 GPIO | Signal | Direction |
 | :--- | :--- | :--- | :--- |
 | **GND**  | **GND**  | Common Ground | Shared |
 | **IO0** (`V15`) | **GPIO 13** (`D13`) | `out_data[0]` (`D0`) | FPGA $\rightarrow$ ESP32 |
