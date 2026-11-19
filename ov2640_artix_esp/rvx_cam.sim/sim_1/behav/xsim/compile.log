@@ -1,0 +1,42 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/ov2640_nexys.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/ov2640_nexys.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/camera_get_pic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module camera_get_pic
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/camera_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module camera_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/camera_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module camera_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/denoised_sobel_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module denoised_sobel_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/reg_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rvx
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_bus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rvx_bus
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_cam_nexys.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rvx_cam_nexys
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rvx_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_gpio.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rvx_gpio
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_mtimer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rvx_mtimer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rvx_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_spi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rvx_spi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/rvx_uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rvx_uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/sccb_sender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sccb_sender
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/vga_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sources_1/imports/vga_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sim_1/new/tb_rvx_cam_nexys.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rvx_cam_nexys

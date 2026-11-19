@@ -1,0 +1,10 @@
+Time resolution is 1 ps
+Block Memory Generator module tb_rvx_cam_nexys.uut.rvx_instance.accel_inst.buffer.inst.native_mem_module.blk_mem_gen_v8_4_11_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+[0] Simulation Started. Holding reset...
+[200000] Reset Released. RVX Core Booting...
+[500000000] TEST: Flipping SW0 HIGH (e.g., Camera Enable)
+[1000000000] TEST: Flipping SW1 HIGH (e.g., Filter Enable)
+[1500000000] TEST: Flipping SW2 HIGH
+[5000200000] Simulation Finished.
+$finish called at time : 5000200 ns : File "/home/animandal/vivado_projects/rvx_cam/rvx_cam.srcs/sim_1/new/tb_rvx_cam_nexys.v" Line 123
+INFO: xsimkernel Simulation Memory Usage: 265000 KB (Peak: 321776 KB), Simulation CPU Usage: 259800 ms
