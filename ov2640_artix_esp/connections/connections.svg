@@ -1,0 +1,240 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 850" width="1220" height="850">
+  <style>
+    .board { fill:#fff; stroke:#000; stroke-width:2.2; }
+    .hdr-line { stroke:#000; stroke-width:1.8; }
+    .title { font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:bold; fill:#000; text-anchor:middle; }
+    .subtitle { font-family:Arial,Helvetica,sans-serif; font-size:12px; fill:#000; text-anchor:middle; }
+    .sec-box { fill:#fff; stroke:#000; stroke-width:1.2; }
+    .sec-txt { font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:bold; fill:#000; text-anchor:middle; }
+    .wire { stroke:#000; stroke-width:1.6; fill:none; }
+    .wire-pwr { stroke:#000; stroke-width:2.2; fill:none; }
+    .pad { fill:#fff; stroke:#000; stroke-width:1.6; }
+    .pin-r,.pin-l,.pin-r-bold,.pin-l-bold {
+      font-family:"Courier New",Consolas,monospace;
+      font-size:11px;
+      fill:#000;
+    }
+    .pin-r { text-anchor:end; }
+    .pin-l { text-anchor:start; }
+    .pin-r-bold { text-anchor:end; font-weight:bold; }
+    .pin-l-bold { text-anchor:start; font-weight:bold; }
+  </style>
+
+  <rect width="1220" height="850" fill="#fff"/>
+
+  <!-- Board containers -->
+  <g id="board-camera">
+    <rect class="board" x="30" y="30" width="190" height="790" rx="4"/>
+    <line class="hdr-line" x1="30" y1="96" x2="220" y2="96"/>
+    <text class="title" x="125" y="59">OV2640 CAMERA</text>
+    <text class="subtitle" x="125" y="80">Camera Module</text>
+  </g>
+
+  <g id="board-fpga">
+    <rect class="board" x="330" y="30" width="540" height="790" rx="4"/>
+    <line class="hdr-line" x1="330" y1="96" x2="870" y2="96"/>
+    <text class="title" x="600" y="59">DIGILENT ARTY A7</text>
+    <text class="subtitle" x="600" y="80">Artix-7 FPGA</text>
+  </g>
+
+  <g id="board-esp32">
+    <rect class="board" x="980" y="30" width="210" height="790" rx="4"/>
+    <line class="hdr-line" x1="980" y1="96" x2="1190" y2="96"/>
+    <text class="title" x="1085" y="59">ESP32 DEVKIT</text>
+    <text class="subtitle" x="1085" y="80">Development Board</text>
+  </g>
+
+  <!-- Section headers -->
+  <g id="section-headers">
+    <rect class="sec-box" x="42" y="108" width="166" height="24" rx="2"/>
+    <text class="sec-txt" x="125" y="124">Data Bus (D7-D0)</text>
+
+    <rect class="sec-box" x="344" y="108" width="240" height="24" rx="2"/>
+    <text class="sec-txt" x="464" y="124">Pmod JA </text>
+
+    <rect class="sec-box" x="42" y="412" width="166" height="24" rx="2"/>
+    <text class="sec-txt" x="125" y="428">Sync &amp; Control</text>
+
+    <rect class="sec-box" x="344" y="412" width="240" height="24" rx="2"/>
+    <text class="sec-txt" x="464" y="428">Pmod JB </text>
+
+    <rect class="sec-box" x="42" y="716" width="166" height="24" rx="2"/>
+    <text class="sec-txt" x="125" y="732">Power</text>
+
+    <rect class="sec-box" x="344" y="716" width="240" height="24" rx="2"/>
+    <text class="sec-txt" x="464" y="732">Pmod Power</text>
+
+
+    <rect class="sec-box" x="992" y="108" width="186" height="24" rx="2"/>
+    <text class="sec-txt" x="1085" y="124">Parallel Data</text>
+
+	<rect class="sec-box" x="694" y="108" width="160" height="24" rx="2"/>
+    <text class="sec-txt" x="764" y="124">GPIO </text>
+
+    <rect class="sec-box" x="992" y="412" width="186" height="24" rx="2"/>
+    <text class="sec-txt" x="1085" y="428">Sync Inputs</text>
+
+
+
+    <rect class="sec-box" x="992" y="716" width="186" height="24" rx="2"/>
+    <text class="sec-txt" x="1085" y="732">ESP32 Ground</text>
+  </g>
+
+  <!-- Camera data bus -->
+  <g id="wires-cam-data">
+    <g class="wire">
+      <path d="M220 152 H330 M220 185.5 H330 M220 219 H330 M220 252.5 H330 M220 286 H330 M220 319.5 H330 M220 353 H330 M220 386.5 H330"/>
+    </g>
+    <g class="pad">
+      <circle cx="220" cy="152" r="4"/><circle cx="330" cy="152" r="4"/>
+      <circle cx="220" cy="185.5" r="4"/><circle cx="330" cy="185.5" r="4"/>
+      <circle cx="220" cy="219" r="4"/><circle cx="330" cy="219" r="4"/>
+      <circle cx="220" cy="252.5" r="4"/><circle cx="330" cy="252.5" r="4"/>
+      <circle cx="220" cy="286" r="4"/><circle cx="330" cy="286" r="4"/>
+      <circle cx="220" cy="319.5" r="4"/><circle cx="330" cy="319.5" r="4"/>
+      <circle cx="220" cy="353" r="4"/><circle cx="330" cy="353" r="4"/>
+      <circle cx="220" cy="386.5" r="4"/><circle cx="330" cy="386.5" r="4"/>
+    </g>
+    <g class="pin-r">
+      <text x="208" y="156.5">D7</text><text x="208" y="190">D6</text>
+      <text x="208" y="223.5">D5</text><text x="208" y="257">D4</text>
+      <text x="208" y="290.5">D3</text><text x="208" y="324">D2</text>
+      <text x="208" y="357.5">D1</text><text x="208" y="391">D0</text>
+    </g>
+    <g class="pin-l">
+      <text x="342" y="156.5">JA1  [G13] camera_data[7]</text>
+      <text x="342" y="190">JA2  [B11] camera_data[6]</text>
+      <text x="342" y="223.5">JA3  [A11] camera_data[5]</text>
+      <text x="342" y="257">JA4  [D12] camera_data[4]</text>
+      <text x="342" y="290.5">JA7  [D13] camera_data[3]</text>
+      <text x="342" y="324">JA8  [B18] camera_data[2]</text>
+      <text x="342" y="357.5">JA9  [A18] camera_data[1]</text>
+      <text x="342" y="391">JA10 [K16] camera_data[0]</text>
+    </g>
+  </g>
+
+  <!-- Camera sync and control -->
+  <g id="wires-cam-ctrl">
+    <g class="wire">
+      <path d="M220 456 H330 M220 489.5 H330 M220 523 H330 M220 556.5 H330 M220 590 H330 M220 623.5 H330 M220 657 H330 M220 690.5 H330"/>
+    </g>
+    <g class="pad">
+      <circle cx="220" cy="456" r="4"/><circle cx="330" cy="456" r="4"/>
+      <circle cx="220" cy="489.5" r="4"/><circle cx="330" cy="489.5" r="4"/>
+      <circle cx="220" cy="523" r="4"/><circle cx="330" cy="523" r="4"/>
+      <circle cx="220" cy="556.5" r="4"/><circle cx="330" cy="556.5" r="4"/>
+      <circle cx="220" cy="590" r="4"/><circle cx="330" cy="590" r="4"/>
+      <circle cx="220" cy="623.5" r="4"/><circle cx="330" cy="623.5" r="4"/>
+      <circle cx="220" cy="657" r="4"/><circle cx="330" cy="657" r="4"/>
+      <circle cx="220" cy="690.5" r="4"/><circle cx="330" cy="690.5" r="4"/>
+    </g>
+    <g class="pin-r">
+      <text x="208" y="460.5">SIOD</text><text x="208" y="494">PCLK</text>
+      <text x="208" y="527.5">SIOC</text><text x="208" y="561">VSYNC</text>
+      <text x="208" y="594.5">HREF</text><text x="208" y="628">XCLK</text>
+      <text x="208" y="661.5">PWDN</text><text x="208" y="695">RESET</text>
+    </g>
+    <g class="pin-l">
+      <text x="342" y="460.5">JB1  [E15] sio_d</text>
+      <text x="342" y="494">JB2  [E16] pclk</text>
+      <text x="342" y="527.5">JB3  [D15] sio_c</text>
+      <text x="342" y="561">JB4  [C15] vsync</text>
+      <text x="342" y="594.5">JB7  [J17] href</text>
+      <text x="342" y="628">JB8  [J18] xclk</text>
+      <text x="342" y="661.5">JB9  [K15] cam_pwdn</text>
+      <text x="342" y="695">JB10 [J15] cam_reset</text>
+    </g>
+  </g>
+
+  <!-- Camera power -->
+  <g id="wires-cam-pwr">
+    <path class="wire-pwr" d="M220 760 H330 M220 793.5 H330"/>
+    <g class="pad">
+      <circle cx="220" cy="760" r="4"/><circle cx="330" cy="760" r="4"/>
+      <circle cx="220" cy="793.5" r="4"/><circle cx="330" cy="793.5" r="4"/>
+    </g>
+    <g class="pin-r-bold">
+      <text x="208" y="764.5">3.3V (VCC)</text>
+      <text x="208" y="798">GND</text>
+    </g>
+    <g class="pin-l-bold">
+      <text x="342" y="764.5">VCC [Pmod Pin 6/12]</text>
+      <text x="342" y="798">GND [Pmod Pin 5/11]</text>
+    </g>
+  </g>
+
+  <!-- FPGA to ESP32 data bus -->
+  <g id="wires-esp-data">
+    <g class="wire">
+      <path d="M870 152 H980 M870 185.5 H980 M870 219 H980 M870 252.5 H980 M870 286 H980 M870 319.5 H980 M870 353 H980 M870 386.5 H980"/>
+    </g>
+    <g class="pad">
+      <circle cx="870" cy="152" r="4"/><circle cx="980" cy="152" r="4"/>
+      <circle cx="870" cy="185.5" r="4"/><circle cx="980" cy="185.5" r="4"/>
+      <circle cx="870" cy="219" r="4"/><circle cx="980" cy="219" r="4"/>
+      <circle cx="870" cy="252.5" r="4"/><circle cx="980" cy="252.5" r="4"/>
+      <circle cx="870" cy="286" r="4"/><circle cx="980" cy="286" r="4"/>
+      <circle cx="870" cy="319.5" r="4"/><circle cx="980" cy="319.5" r="4"/>
+      <circle cx="870" cy="353" r="4"/><circle cx="980" cy="353" r="4"/>
+      <circle cx="870" cy="386.5" r="4"/><circle cx="980" cy="386.5" r="4"/>
+    </g>
+    <g class="pin-r">
+      <text x="858" y="156.5">out_data[0] [V15] IO0</text>
+      <text x="858" y="190">out_data[1] [U16] IO1</text>
+      <text x="858" y="223.5">out_data[2] [P14] IO2</text>
+      <text x="858" y="257">out_data[3] [T11] IO3</text>
+      <text x="858" y="290.5">out_data[4] [R12] IO4</text>
+      <text x="858" y="324">out_data[5] [T14] IO5</text>
+      <text x="858" y="357.5">out_data[6] [T15] IO6</text>
+      <text x="858" y="391">out_data[7] [T16] IO7</text>
+    </g>
+    <g class="pin-l">
+      <text x="992" y="156.5">GPIO 13 (D13/D0)</text>
+      <text x="992" y="190">GPIO 14 (D14/D1)</text>
+      <text x="992" y="223.5">GPIO 15 (D15/D2)</text>
+      <text x="992" y="257">GPIO 16 (RX2/D3)</text>
+      <text x="992" y="290.5">GPIO 17 (TX2/D4)</text>
+      <text x="992" y="324">GPIO 18 (D18/D5)</text>
+      <text x="992" y="357.5">GPIO 19 (D19/D6)</text>
+      <text x="992" y="391">GPIO 21 (D21/D7)</text>
+    </g>
+  </g>
+
+  <!-- FPGA to ESP32 sync -->
+  <g id="wires-esp-sync">
+    <g class="wire">
+      <path d="M870 456 H980 M870 489.5 H980 M870 523 H980"/>
+    </g>
+    <g class="pad">
+      <circle cx="870" cy="456" r="4"/><circle cx="980" cy="456" r="4"/>
+      <circle cx="870" cy="489.5" r="4"/><circle cx="980" cy="489.5" r="4"/>
+      <circle cx="870" cy="523" r="4"/><circle cx="980" cy="523" r="4"/>
+    </g>
+    <g class="pin-r">
+      <text x="858" y="460.5">out_pclk [N15] IO8</text>
+      <text x="858" y="494">out_vsync [M16] IO9</text>
+      <text x="858" y="527.5">out_href [V17] IO10</text>
+    </g>
+    <g class="pin-l">
+      <text x="992" y="460.5">GPIO 22 (PCLK)</text>
+      <text x="992" y="494">GPIO 23 (VSYNC)</text>
+      <text x="992" y="527.5">GPIO 25 (HREF)</text>
+    </g>
+  </g>
+
+<!-- Shared Ground -->
+<g id="wires-esp-gnd">
+  <line class="wire-pwr" x1="870" y1="760" x2="980" y2="760"/>
+  <circle class="pad" cx="870" cy="760" r="4"/>
+  <circle class="pad" cx="980" cy="760" r="4"/>
+
+  <g class="pin-r-bold">
+    <text x="858" y="764.5">GND</text>
+  </g>
+
+  <g class="pin-l-bold">
+    <text x="992" y="764.5">GND</text>
+  </g>
+</g>
+</svg>
